@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Franflick"
+        tools:targetApi="31">
+        <activity android:name=".pantalla_registrarse"/>
+        <activity android:name=".pantalla_ayudas"/>
+        <activity android:name=".pantalla_configuracion"/>
+        <activity android:name=".pantalla_deseo_ver"/>
+        <activity android:name=".pantalla_error"/>
+        <activity android:name=".pantalla_fallo"/>
+        <activity android:name=".pantalla_listas"/>
+        <activity android:name=".pantalla_pagina_principal"/>
+        <activity android:name=".pantalla_vistas"/>
+        <activity android:name=".pantalla_cambiar_contrasenia"/>
+        <activity
+            android:name=".pantalla_login"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
