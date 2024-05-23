@@ -1,0 +1,48 @@
+package com.example.franflick
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
+import androidx.activity.ComponentActivity
+
+class pantalla_pagina_principal: ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        // Llamada al método 'onCreate' de la clase base 'AppCompatActivity'
+        super.onCreate(savedInstanceState)
+        // Establece el diseño de la actividad utilizando el archivo XML 'pagina_principal.xml'
+        setContentView(R.layout.pagina_principal)
+
+        // Encuentra el botón con el ID 'boton_configuracion' en el diseño y lo asigna a 'btnConfiguracion'
+        val btnConfiguracion: Button = findViewById(R.id.boton_configuracion)
+        // Establece un listener cuando se clika el botón 'btnConfiguracion'
+        btnConfiguracion.setOnClickListener {
+            // Crea un Intent para iniciar 'pantalla_configuracion'
+            val intent: Intent = Intent(this, pantalla_configuracion::class.java)
+            // Inicia la actividad especificada por el Intent
+            startActivity(intent)
+        }
+
+        // Encuentra el botón con el ID 'boton_lista' en el diseño y lo asigna a 'btnListas'
+        val btnListas: ImageButton = findViewById(R.id.boton_lista)
+        // Establece un listener cuando se clika el botón 'btnListas'
+        btnListas.setOnClickListener {
+            // Crea un Intent para iniciar 'pantalla_listas'
+            val intent: Intent = Intent(this, pantalla_listas::class.java)
+            // Inicia la actividad especificada por el Intent
+            startActivity(intent)
+        }
+
+        // Encuentra el botón con el ID 'boton_ayuda' en el diseño y lo asigna a 'btnAyudas'
+        val btnAyudas: ImageButton = findViewById(R.id.boton_ayuda)
+        // Establece un listener cuando se clika el botón 'btnAyudas'
+        btnAyudas.setOnClickListener {
+            // Crea un Intent para iniciar 'pantalla_ayudas'
+            val intent: Intent = Intent(this, pantalla_ayudas::class.java)
+            // Inicia la actividad especificada por el Intent
+            startActivity(intent)
+        }
+
+    }
+}
