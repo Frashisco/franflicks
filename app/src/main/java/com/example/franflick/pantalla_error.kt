@@ -19,7 +19,7 @@ class pantalla_error: ComponentActivity() {
         // Establece un listener cuando se clika el botón 'btnAceptarFallo'
         btnAceptarFallo.setOnClickListener {
             // Crea un Intent para iniciar 'pantalla_login'
-            val intent: Intent = Intent(this, pantalla_pagina_principal::class.java)
+            val intent: Intent = Intent(this, pantalla_login::class.java)
             // Inicia la actividad especificada por el Intent
             startActivity(intent)
         }
